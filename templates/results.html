@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% set active_page = "page6" %}
+
+{% block title %}Results{% endblock %}
+
+{% block content %}
+<h1>Results</h1>
+<p>Here are your results for the questions.</p>
+<p>Your answer for question One was {{ session['answer1'] }}  and it was 256 </p>
+<p>Your answer for question Two was {{ session['answer2'] }} and it was 2</p>
+<p>Your answer for question Three was  {{ session['answer3'] }} and it was 20</p>
+<p>Your answer for question Four was  {{ session['answer4'] }} and it was 612</p>
+<h1>Your final score is: {{grade}} / 4 </h1>
+<h1>your time for the test was {{ time_taken }} seconds</h1>
+
+{% endblock %}
