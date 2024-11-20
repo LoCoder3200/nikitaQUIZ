@@ -19,6 +19,10 @@ def render_pageThree():
     if "answer1" not in session:
         session["answer1"]=request.form['questionONE']
     return render_template('page3.html')
+@app.route("/question3",methods=['GET','POST'])
+    if "answer2" not in session:
+        session["answer2"]=request.form['questionTWO']
+    return render_template('page4.html')
 @app.route('/startOver')
 def startOver():
     session.clear() #clears variable values and creates a new session
