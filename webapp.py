@@ -24,7 +24,7 @@ def render_pageFour():
     if "answer2" not in session:
         session["answer2"]=request.form['questionTWO']
     return render_template('page4.html')
-@app.route("/question4", methods=['GET','POST'})
+@app.route("/question4", methods=['GET','POST'])
 def render_results():
     if "answer3" not in session:
         session["answer3"]=request.form["questionTHREE"]
