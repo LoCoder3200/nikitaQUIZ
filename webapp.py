@@ -36,7 +36,7 @@ def return_score():
         value+=1
     if session["answer2"]=="Sultan Kösen":
         value+=1
-    if session["answer3"]=="Joseph Dituri"
+    if session["answer3"]=="Joseph Dituri":
         value+=1
     return value
 @app.route('/startOver')
