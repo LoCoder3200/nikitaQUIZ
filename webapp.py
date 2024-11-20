@@ -24,11 +24,21 @@ def render_pageFour():
     if "answer2" not in session:
         session["answer2"]=request.form['questionTWO']
     return render_template('page4.html')
-@app.route("/question4", methods=['GET','POST'])
+@app.route("/question4",methods=['GET','POST'])
 def render_results():
+    value=return_score()
     if "answer3" not in session:
         session["answer3"]=request.form['questionTHREE']
-    return render_template('page5.html')
+    return render_template('page5.html', value=value)
+def return_score():
+    value=0
+    if session["answer1"]=="Aicama Zorba of La-Susa":
+        value+=1
+    if session["answer2"]=="Sultan Kösen":
+        value+=1
+    if session["answer3"]=="Joseph Dituri"
+        value+=1
+    return value
 @app.route('/startOver')
 def startOver():
     session.clear() #clears variable values and creates a new session
