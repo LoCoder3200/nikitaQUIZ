@@ -27,7 +27,7 @@ def render_pageFour():
 @app.route("/question4", methods=['GET','POST'])
 def render_results():
     if "answer3" not in session:
-        session["answer3"]=request.form["questionTHREE"]
+        session["answer3"]=request.form['questionTHREE']
     return render_template('page5.html')
 @app.route('/startOver')
 def startOver():
