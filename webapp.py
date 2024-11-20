@@ -26,9 +26,10 @@ def render_pageFour():
     return render_template('page4.html')
 @app.route("/question4",methods=['GET','POST'])
 def render_results():
-    value=return_score()
+    
     if "answer3" not in session:
         session["answer3"]=request.form['questionTHREE']
+    value=return_score()
     return render_template('page5.html', value=value)
 def return_score():
     value=0
