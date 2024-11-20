@@ -5,14 +5,16 @@
 {% block title %}Home{% endblock %}
 
 {% block content %}
-<h1>Who's The Tallest Person in The World</h1>
+<h1>Longest Time Spent Living Underwater</h1>
 <form action="/question4" method="POST">
   <select name="questionTHREE">
-    <option>Sultan Kösen</option>
-    <option>Nikita Kolosov</option>
-    <option>Fredreich Willhelm</option>
-    <option>Sam Al</option>
+    <option>Houdini</option>
+    <option>David Blaine</option>
+    <option>Jose Moreno</option>
+    <option> Joseph Dituri</option>
   </select>
+  <br><br>
+    <input type="submit" value="Get a fun fact!">
 </form>
 <p>{{session["answer2"]}}</p>
 {% endblock %}
