@@ -13,6 +13,7 @@ def render_main():
     return render_template('index.html')
 @app.route("/page2")
 def render_pageTwo():
+    session["start_time"] = time.time()
     return render_template('page2.html')
 @app.route("/question2",methods=['GET','POST'])
 def render_pageThree():
