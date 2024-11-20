@@ -30,7 +30,9 @@ def render_results():
     if "answer3" not in session:
         session["answer3"]=request.form['questionTHREE']
     value=return_score()
-    return render_template('page5.html', value=value)
+    session["end_time"] = time.time()
+    time_taken = session["end_time"] - session["start_time"]
+    return render_template('page5.html', value=value, time_taken=time_taken)
 def return_score():
     value=0
     if session["answer1"]=="Aicama Zorba of La-Susa":
